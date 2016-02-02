@@ -25,7 +25,10 @@ class Square implements ShapeInterface {
 	 */
 	public function area()
 	{
-		return sqrt($this->side);
+        // i changed sqrt() to pow(), based on this formula its x to the power of 2.
+        // x is multiplied by itself. i.e. x * x
+        // reference: http://math2.org/math/geometry/areasvols.htm
+        return pow($this->side, 2);
 	}
 
 	/**

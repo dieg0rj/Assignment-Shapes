@@ -12,7 +12,18 @@ class Calculator {
 	 */
 	public function surfaceArea(array $shapes)
 	{
-		return "undefined";
+        $total_area = 0;
+
+        foreach ($shapes as $shape) {
+
+            if (!is_null($shape)) {
+                var_dump($shape->area());
+                $total_area += $shape->area();
+            }
+
+		}
+
+        return $total_area;
 	}
 
 	/**
@@ -23,7 +34,21 @@ class Calculator {
 	 */
 	public function totalVolume(array $shapes)
 	{
-		return "undefined";
+		$total_volume = 0;
+
+        foreach ($shapes as $shape) {
+
+            if (!is_null($shape)) {
+
+                if (method_exists($shape, 'volume')) {
+                    $total_volume += $shape->volume();
+                }
+
+            }
+
+        }
+
+        return $total_volume;
 	}
 
 }

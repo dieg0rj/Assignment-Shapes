@@ -25,7 +25,11 @@ class Circle implements ShapeInterface {
 	 */
 	public function area()
 	{
-		return pi() * sqrt($this->radius);
+
+        // i changed sqrt() to pow(), based on this formula its r to the power of 2.
+        // r is multiplied by itself. i.e. r * r
+        // reference: http://math2.org/math/geometry/areasvols.htm
+		return pi() * pow($this->radius, 2);
 	}
 
 	/**
