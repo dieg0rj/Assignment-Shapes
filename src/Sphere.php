@@ -2,9 +2,10 @@
 
 namespace Shapes;
 
+include_once('ThreeDShapeInterface.php');
 include_once('ShapeInterface.php');
 
-class Sphere implements ShapeInterface {
+class Sphere implements ThreeDShapeInterface, ShapeInterface {
 
     protected $radius;
 

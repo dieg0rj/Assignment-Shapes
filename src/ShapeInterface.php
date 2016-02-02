@@ -18,5 +18,4 @@ interface ShapeInterface {
 	 * @return int
 	 */
 	public function perimeter();
-
 }
